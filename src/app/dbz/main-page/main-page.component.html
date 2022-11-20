@@ -3,33 +3,10 @@
 
 <div class="row">
     <div class="col">
-        
-
-        <app-characters [characters]="characters"></app-characters>
+        <app-characters></app-characters>
     </div>
-    
-    <div class="col">
-        <h3>Agregar</h3>
-        <hr>
-        <form (ngSubmit)="add()">
-            <input 
-                class="row"
-                type="text" 
-                placeholder="Name" 
-                name="name"
-                [(ngModel)]="lastCharacter.name"
-                >
-                
-            <br>
-            <input 
-                class="row"
-                type="number" 
-                placeholder="Power"
-                [(ngModel)]="lastCharacter.power"
-                name="power"
-            >
-            <br>
-            <button>Add</button>
-        </form>
-    </div>
+    <!-- TODO Add new component with Add logic -->
+    <app-add-logic 
+    [charToAdd] = "charToAdd"
+    ></app-add-logic>
 </div>
